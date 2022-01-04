@@ -1,4 +1,8 @@
-a, b = map(int, input().split())
-
-n = (b-a)/3
-print(int(n+1))
+a, b = map(int, input().split(' '))
+n = 0
+while a <= b:
+    a = 3*a
+    b = 2*b 
+    n+=1
+print(n)
+    
