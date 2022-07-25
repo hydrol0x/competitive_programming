@@ -1,0 +1,28 @@
+"""
+ID: mrjacob1 
+LANG: PYTHON3
+TASK: ride 
+"""
+fin = open ('ride.in', 'r')
+fout = open ('ride.out', 'w')
+comet = fin.readline().upper() 
+group = fin.readline().upper() 
+
+numsc =[(ord(char)-64) for char in comet if (ord(char)-64 > 0)]
+prodc = 1 
+for num in numsc:
+    prodc = prodc*num 
+
+
+numsg = [(ord(char)-64) for char in group if (ord(char)-64 > 0)]
+prodg = 1
+for num in numsg:
+    prodg = prodg*num 
+    
+if (prodc%47) == (prodg%47):
+    fout.write("GO" + "\n") 
+else:
+    fout.write("STAY" + "\n") 
+
+
+fout.close()
